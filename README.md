@@ -1,2 +1,60 @@
-# ror-task
-Practical test for Ruby on Rails.
+# Rails Test
+
+[![Build Status](https://travis-ci.org/dinomedia/ror-task.svg)](https://travis-ci.org/dinomedia/ror-task)
+
+This Rails application is a foundation for the following Ruby on Rails technical test. To start the test please fork this repository and follow the instructions below.
+
+## Tasks
+
+* Create an API endpoint that receives the following format `params` hash and creates the resources:
+
+```ruby
+{
+  sales: [
+    {
+      date: '20140103',
+      time: '0700',
+      code: 'FL',
+      value: '2.00'
+    },
+    {
+      date: '20140103',
+      time: '0815',
+      code: 'DO',
+      value: '1.00'
+    }
+  ]
+}
+```
+
+* Create a JSON API endpoint for reading a specific sale.
+* Create a JSON API endpoint for destroying a specific sale.
+* Implement password security for sales during their creation that must then be used to retrieve that sale.
+
+### Notes
+
+* The creation API endpoint should be able to receive both a singular resource hash and an array of multiple resource hashes.
+* Data should be stored in it's appropriate format but presented in the fashion demonstrated above.
+* Please implement password security manually - do not use `has_secure_password`.
+
+## Caveats & Rules
+
+### Testing
+
+We use [RSpec](https://relishapp.com/rspec) and follow an outside-in testing approach. Approach testing your work in the same way you would during your day-to-day development as we use tests as a marker for code quality.
+
+### Quality Indicators
+
+Please make use of quality indicators such as [CodeClimate](http://codeclimate.com), [Travis CI](travis-ci.com) and [Coveralls](https://coveralls.io). Update the provided badges in your `README.md` when setting up.
+
+### Commit History
+
+Please keep your commit history clear and descriptive, following best practices for Git commits. Your commit history allows us to observe your thought process and how you approach a problem.
+
+## Tips & Hints
+
+* Hexagonal Rails
+* Demonstration of best practices
+* SOLID principles
+* Design patterns
+* TDD
