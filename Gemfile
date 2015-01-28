@@ -41,6 +41,12 @@ gem 'spring',        group: :development
 # micro-framework for creating REST-like APIs in Ruby
 gem 'grape'
 
+# API docs
+gem 'grape-swagger'
+
+# API docs hosting
+gem 'swagger-ui_rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.2'
 end
