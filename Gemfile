@@ -38,6 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# micro-framework for creating REST-like APIs in Ruby
+gem 'grape'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.2'
 end
