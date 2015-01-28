@@ -3,7 +3,7 @@ class CreateSales < ActiveRecord::Migration
     create_table :sales do |t|
       t.datetime :date
       t.string :code
-      t.decimal :value
+      t.decimal :value, :precision => 8, :scale => 2
 
       t.timestamps
     end
