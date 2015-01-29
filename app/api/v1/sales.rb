@@ -2,16 +2,20 @@ module V1
   class Sales < Grape::API
 
     resources :sales do
-      #List all sales
+      #Get all sales
       desc "Return list of all sales"
       get do
         Sale.all
       end
 
-      #Get a specific sale (first)
-      desc "First sale"
-      get :first do
-        Sale.first
+      #Get a specific sale
+      desc "A specific sale"
+      params do
+        requires :id, type: Integer, desc: "Sale ID"
+      end
+
+      get ':id' do
+        Sale.find(params[:id])
       end
 
       #Create a sale
