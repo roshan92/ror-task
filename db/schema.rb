@@ -15,11 +15,12 @@ ActiveRecord::Schema.define(version: 20150128131930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "sales", force: true do |t|
-    t.datetime "date"
+    t.date     "date"
     t.string   "code"
-    t.decimal  "value"
+    t.decimal  "value",      precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
