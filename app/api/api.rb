@@ -11,6 +11,4 @@ class API < Grape::API
   end
 
   mount V1::Sales
-
-  add_swagger_documentation api_version: 'v1', hide_documentation_path: true
 end
